@@ -23,3 +23,19 @@ menuhBtn.onclick = () => {
     searchBtn.classList.remove('fa-times');
     searchForm.classList.remove('active');
 }
+
+
+let slides = document.querySelectorAll('.home .slide');
+let index = 0;
+function next() {
+    slides[index].classList.remove('slide-active');
+    index = (index + 1) % slides.length;
+    console.log(index);
+    slides[index].classList.add('slide-active')
+}
+function prev() {
+    slides[index].classList.remove('slide-active');
+    index = (index - 1 + slides.length) % slides.length;
+    console.log(index);
+    slides[index].classList.add('slide-active')
+}

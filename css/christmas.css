@@ -14,7 +14,7 @@
     --white: #fff;
     --light-color: #666;
     --light-bg: #eee;
-    --border: 2rem solid var(--black);
+    --border: .2rem solid var(--black);
     --box-shadow: 0 .5rem 1rem rgba(0,0,0,1);
 }
 html{
@@ -22,6 +22,10 @@ html{
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
+}
+
+section{
+    padding: 3rem 9%;
 }
 .header{
     position: sticky;
@@ -102,10 +106,272 @@ html{
 }
 
 
+.home {
+    position: relative;
+    padding: 0;
+}
+.slide {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 2rem;
+    display: flex;
+    min-height: 60vh;
+    display: none;
+}
+.slide-active{
+    display: flex;
+}
+.content {
+    margin: auto;
+    text-align: center;
+}
+.content span {
+    color: var(--black);
+    display: block;
+    font-size: 3rem;
+    text-shadow: var(--box-shadow);
+    animation: fadeIn .2s linear backwards;
+}
+.content h3 {
+    font-size: 5rem;
+    color: var(--black); 
+    text-shadow: var(--box-shadow);
+    text-transform: uppercase;
+    animation: fadeIn .2s linear backwards .4s;
+    
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:1rem 3rem;
+    background: var(--red);
+    color: var(--white);
+    font-size: 1.7rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+@keyframes fadeIn {
+    0%{
+      opacity: 0;
+      transform: translateY(4rem) scale(.4);
+    }
+}
+.btn:hover {
+    letter-spacing: .1rem;
+}
+.btn{
+    animation: fadeIn .2s linear backwards .6s;
+
+}
+#next-slide,
+#prev-slide {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    color: var(--black);
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    position: absolute;
+    bottom: 2rem; right: 2rem;
+    text-align: center;
+}
+#prev-slide {
+    right: 8rem;
+}
+#next-slide:hover,
+#prev-slide:hover {
+    background: var(--red);
+    color: var(--white);
+}
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 2%;
+}
+.box {
+    width: 16%;
+    text-align: center;
+}
+.box img {
+    height: 14rem;
+    margin-bottom: 1rem;
+}
+.box h3 {
+    font-size: 1.7rem;
+    color: var(--black);
+    font-weight: normal;
+}
+
+.box h3:hover {
+    color: var(--red);
+}
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.image{
+    width: 48%;
+    padding-bottom: 5rem;
+    padding-right: 5rem;
+}
+.image img {
+    width: 100%;
+    box-shadow: 4rem 4rem 0px var(--light-bg);
+}
+.content-about {
+    width: 48%;
+}
+.box-about {
+    padding: 3rem;
+    background: var(--light-bg);
+}
+.box-about h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.box-about p {
+    padding: 1rem 0;
+    line-height: 2;
+    color: var(--light-color);
+    font-size: 1.4rem;
+}
+.icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin-top: 2%;
+}
+.icons-about {
+    width: 32%;
+    background: var(--light-bg);
+    padding: 2rem;
+    text-align: center;
+}
+.icons-about i{
+    color: var(--red);
+    margin-bottom: 1rem;
+    font-size: 5rem;
+}
+.icons-about p {
+    font-size: 1.4rem;
+    color: var(--light-color);
+}
 
 
+/*  css box shop  */
+.heading {
+    text-align: center;
+    color: var(--black);
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+.shop{
+    background: var(--light-bg);
+}
+.box-shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.box-shop {
+    width: 32%;
+    text-align: center;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    margin-bottom: 2%;
+}
+.box-shop:hover .image-shop img {
+    transform: scale(1.1);
+}
+.box-shop:hover .image-shop .icons-shop {
+    transform: translateX(0rem);
+}
 
+.image-shop {
+    position: relative;
+    overflow: hidden;
+}
+.image-shop img {
+    height: 30rem;
+}
+.icons-shop {
+    position: absolute;
+    top: 1rem; left: 2rem;
+    transform: translateX(-10rem);
+}
+.icons-shop a {
+    display: block;
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    color: var(--black);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    margin-top: 1rem;
+}
+.icons-shop a:hover {
+    background: var(--red);
+    color: var(--white);
 
+}
+.box-shop-content {
+    padding: 2rem;
+
+}
+.box-shop-content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+    font-weight: normal;
+}
+.box-shop-content .price {
+    font-size: 2rem;
+    color: var(--red);
+    font-weight: bold;
+}
+.box-shop-content .price span{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    font-weight: normal;
+    text-decoration: line-through;
+}
+/*  css banner */
+.banner {
+    background: url(../images/banner-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner-content {
+    max-width: 40rem;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+    margin: 10rem 0;
+}
+.banner-content span {
+    font-size: 2rem;
+    color: var(--red);
+}
+.banner-content h3 {
+    font-size: 3rem;
+    color: var(--black);
+    padding-top: .5rem;
+}
+.banner-content p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+    line-height: 2;
+}
 
 
 
@@ -117,6 +383,9 @@ html{
     }
     .header {
         padding: 1.5rem 2rem;
+    }
+    section{
+        padding: 3rem 2rem;
     }
 
 }
@@ -133,6 +402,8 @@ html{
         padding: 0 2rem;
         /* border-top: var(--border); */
         clip-path: polygon(50% 0%, 0 0, 100% 0);
+        border-top: var(--border);
+        border-bottom: var(--border);
         
     }
     .active {
@@ -143,12 +414,39 @@ html{
         font-size:  2rem;
         margin: 2rem;
     }
+    .box {
+        width: 33%;
+    }
+    .box-shop {
+        width: 48%;
+    }
 
 }
 
-@media (max-width:450) {
+@media (max-width:450px) {
     html{
         font-size: 55%;
+    }
+
+    
+    .content h3 {
+        font-size: 4rem;
+    }
+    .content span {
+        font-size: 2.5rem;
+    }
+    .box {
+        width: 48%;
+    }
+    .content-about,
+    .image{
+        width: 100%;
+    }
+    .box-shop {
+        width: 100%;
+    }
+    .banner-content {
+        margin: 2rem 0;
     }
 
 }
