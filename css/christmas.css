@@ -372,6 +372,172 @@ section{
     padding: 1rem 0;
     line-height: 2;
 }
+.box-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: center;
+
+}
+.box-gallery-container .box-gallery {
+    width: 32%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.box-gallery-container .box-gallery:hover .gallery-content {
+    display: flex;
+}
+.box-gallery-container .box-gallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* position: absolute; */
+
+
+}
+.box-gallery-container .box-gallery .gallery-content {
+    position: absolute;
+    background: rgba(255,255,255,.8);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    top:0; bottom: 0;
+    padding:2rem;
+    text-align: center;
+    border: var(--border);
+    display: none;
+}
+.gallery-content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    animation: fadeIn .2s linear backwards;
+}
+
+.gallery-content p {
+    font-size: 1.4rem;
+    padding: 1% 0;
+    line-height: 2;
+    animation: fadeIn .2s linear backwards .4s;
+    color: var(--black);
+}
+
+.gallery-content .btn {
+    animation: fadeIn .2s linear backwards .4s;
+
+}
+.message{
+    background: url(../images/message-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.message form {
+    background: var(--white);
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 40rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+.message form h3{
+    color: var(--black);
+    font-size:3rem;
+}
+.message form textarea{
+    height: 15rem;
+    resize: none;
+}
+.message form .box-message{
+    width: 100% !important;
+    padding: 1.5rem 0;
+    font-size: 1.6rem;
+    margin: .7rem 0;
+    color: var(--light-color);
+    text-transform: none;
+    border-bottom: var(--border);
+}
+form .box-message:focus {
+    border-color: var(--red);
+}
+
+.box-container-blogs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.box-container-blogs .box-blog {
+    width: 32%;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+.box-container-blogs .box-blog:hover  .image-blogs img{
+  transform: scale(1.1);
+}
+.box-blog .image-blogs {
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
+    border-bottom: var(--border);
+}
+.box-blog .image-blogs img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box-blog .content-blogs{
+    padding: 2rem;
+    position: relative;
+}
+.box-blog .content-blogs .date-blogs{
+    position: absolute;
+    top: -4rem; right: 3rem;
+    width: 8rem;
+    height: 8rem;
+    border: .5rem solid var(--white);
+    border-radius: 50%;
+    background: var(--red);
+    text-align: center;
+    padding-top: 1rem;
+}
+.date-blogs h3 {
+    font-size: 2.7rem;
+    line-height: 1;
+    color: var(--white);
+}
+.date-blogs span {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+.user {
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+.user i {
+    padding-right: .5rem;
+    color: var(--red);
+}
+.user:hover {
+    color: var(--red);
+}
+.title {
+    font-size: 2rem;
+    color: var(--black);
+}
+.title:hover {
+    color: var(--red);
+}
+.content-blogs p {
+    padding: 1rem 0;
+     line-height: 2;
+     color: var(--light-color);
+     font-size: 1.4rem;
+}
+
 
 
 
@@ -387,6 +553,10 @@ section{
     section{
         padding: 3rem 2rem;
     }
+    .box-gallery-container .box-gallery {
+        width: 32%;
+    }
+ 
 
 }
 
@@ -420,6 +590,12 @@ section{
     .box-shop {
         width: 48%;
     }
+    .box-gallery-container .box-gallery {
+        width: 48.5%;
+    }
+    .box-container-blogs .box-blog {
+        width: 49%;
+    }
 
 }
 
@@ -448,5 +624,10 @@ section{
     .banner-content {
         margin: 2rem 0;
     }
-
+    .box-gallery-container .box-gallery {
+        width: 100%;
+    }
+    .box-container-blogs .box-blog {
+        width: 100%;
+    }
 }
