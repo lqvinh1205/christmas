@@ -81,11 +81,14 @@ section{
     position: absolute;
     top: 99%; left: 0; right: 0;
     height: 6rem;
-    background: var(--border);
+    border-top: var(--border);
+    border-bottom: var(--border);
     display: flex;
     align-items: center;
-    padding: 0 2.5rem;
+    background: var(--white);
     clip-path: polygon(50% 0%, 0 0, 100% 0);
+    padding:0 2rem;
+
 }
 .active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -99,6 +102,7 @@ section{
 .search-form label{
     font-size: 2.5rem;
     color: var(--black);
+    margin-left: 2rem;
     cursor: pointer;
 }
 .search-form label:hover{
@@ -538,9 +542,103 @@ form .box-message:focus {
      font-size: 1.4rem;
 }
 
+.service {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    background: var(--red);
+    color: var(--white);
 
+}
+.box-service {
+    width: 32%;
+    text-align: center;
+    padding: 2rem;
+}
+.box-service img {
+    height: 10rem;
+}
+.box-service h3 {
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+.box-service p {
+    line-height: 2;
+    font-size: 1.4rem;
+}
 
+.box-container-footer  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+.box-footer {
+    width: 24%;
+}
+.box-footer h3 {
+    font-size: 2.2rem;
+    color: var(--black);
+    padding: 1rem 0 ;
+}
+.box-footer .link {
+    padding: 1rem 0 ;
+    font-size: 1.4rem;
+    display: block;
+    color: var(--light-color);
+}
+.link i {
+    padding-right: .5rem;
+    color: var(--red);
+}
+.link:hover i {
+    padding-right: 2rem;
 
+}
+.share {
+    margin-top: 2rem;
+}
+.share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    background: var(--light-bg);
+    text-align: center;
+    color: var(--black);
+    margin-right: .7rem;
+}
+.share a:hover{ 
+    color: var(--white);
+    background: var(--red);
+}
+.box-footer p {
+    color:var(--light-color);
+    font-size: 1.7rem;
+    padding: 1rem 0;
+}
+.box-footer form .email {
+    border: var(--border);
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    text-transform: none;
+    color: var(--light-color);
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+.credit {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    border-top: var(--border);
+    color: var(--light-color);
+
+}
+.credit span {
+    color: var(--red);
+}
 
 
 @media (max-width:991px) {
@@ -593,7 +691,14 @@ form .box-message:focus {
     .box-gallery-container .box-gallery {
         width: 48.5%;
     }
+    .box-container-blogs {
+        display: flex;
+        justify-content: space-evenly;
+    }
     .box-container-blogs .box-blog {
+        width: 49%;
+    }
+    .box-footer {
         width: 49%;
     }
 
@@ -628,6 +733,13 @@ form .box-message:focus {
         width: 100%;
     }
     .box-container-blogs .box-blog {
+        width: 100%;
+    }
+    .box-service {
+        width: 100%;
+    
+    }
+    .box-footer {
         width: 100%;
     }
 }
